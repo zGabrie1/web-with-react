@@ -1,4 +1,7 @@
 import React from 'react';
+
+import './assets/styles/global.css'
+
 //Função componente: Função que retorma um HTML.
 //O nome do Componente sempre com letra maiúscula. Exemplo: funtion App()
 function App() {
