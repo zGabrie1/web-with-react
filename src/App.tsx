@@ -2,15 +2,14 @@ import React from 'react';
 
 import './assets/styles/global.css'
 
+import './pages/landing'
+import Landing from './pages/landing';
+
 //Função componente: Função que retorma um HTML.
 //O nome do Componente sempre com letra maiúscula. Exemplo: funtion App()
 function App() {
   return (
-    <div className="App">
-      <h1>Hello, world!</h1>
-
-      <button>Clica!</button>
-    </div>
+    <Landing/>
   );
 }
 
