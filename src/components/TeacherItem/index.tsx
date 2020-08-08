@@ -20,6 +20,7 @@ function TeacherItem() {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         <br/><br/>
                         Illo, soluta. Quia aliquid dicta suscipit dolorem hic quidem,
+                        jidsgvoiasdhfh, weifu  fhhuasd poioiio. wewewqew ksfjdsdj, wey.
                     </p>
                     <footer>
                         <p>
