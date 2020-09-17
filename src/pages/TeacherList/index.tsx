@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FormEvent, useState } from 'react';
 
 
 import './styles.css'
@@ -9,13 +9,24 @@ import Select from '../../components/Select';
 
 
 function TeacherList() {
+
+    const [subject, setSubject] = useState('');
+    const [week_day, setWeekDday] = useState('');
+    const [time, setTime] = useState('');
+
+    function searchTeachers(e: FormEvent) {
+        e.preventDefault
+    }
+
     return (
         <div id="page-teacher-list" className="container">
            <PageHeader title="Estes são os Proffys disponíveis" >
-               <form action="" id="search-teachers">
+               <form id="search-teachers" onSubmit={searchTeachers}>
                     <Select 
                         name="subject" 
                         label="Matéria"
+                        value={subject}
+                        onChange={e => {setSubject(e.target.value)}}
                         options={[
                             { value: 'Artes', label: 'Artes' },
                             { value: 'Biologia', label: 'Biologia ' },
@@ -32,6 +43,8 @@ function TeacherList() {
                    <Select 
                         name="week_day" 
                         label="Dia da semana"
+                        value={week_day}
+                        onChange={e => {setWeekDday(e.target.value)}}
                         options={[
                             { value: '0', label: 'Domingo' },
                             { value: '1', label: 'Segunda' },
@@ -42,7 +55,12 @@ function TeacherList() {
                             { value: '6', label: 'Sábado'}
                         ]}
                     />
-                   <Input type="time" name="time" label="Hora"/>
+                   <Input type="time" 
+                        name="time"  
+                        label="Hora"
+                        value={time}
+                        onChange={e => {setTime(e.target.value)}}
+                    />
                </form>
            </PageHeader>
 
