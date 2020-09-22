@@ -15,8 +15,14 @@ function TeacherList() {
     const [time, setTime] = useState('');
 
     function searchTeachers(e: FormEvent) {
-        e.preventDefault
-    }
+        e.preventDefault();
+
+        console.log({
+            subject,
+            week_day,
+            time
+        })
+;    }
 
     return (
         <div id="page-teacher-list" className="container">
@@ -59,8 +65,12 @@ function TeacherList() {
                         name="time"  
                         label="Hora"
                         value={time}
-                        onChange={e => {setTime(e.target.value)}}
+                        onChange={e => {
+                            setTime(e.target.value)
+                        }}
                     />
+
+                    <button type="submit"> Buscar </button>
                </form>
            </PageHeader>
 
